@@ -1,0 +1,15 @@
+{
+	"httpstatus": 200,
+	"data": {
+		"flag": "1",
+		"map": {
+			"SHH": "上海",
+			"NKH": "南京南",
+			"AOH": "上海虹桥",
+			"SNH": "上海南",
+			"NJH": "南京"
+		}
+	},
+	"messages": "",
+	"status": true
+}
