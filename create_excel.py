@@ -2,11 +2,12 @@
 '''
 Author: zhangpeiyu
 Date: 2020-08-04 23:56:08
-LastEditTime: 2020-08-05 00:10:27
+LastEditTime: 2020-08-05 22:53:56
 Description: 我不是诗人，所以，只能够把爱你写进程序，当作不可解的密码，作为我一个人知道的秘密。
 '''
 from openpyxl import Workbook
 import os
+from openpyxl.styles import Font
 
 
 '''
@@ -16,6 +17,8 @@ def createExcel(header=[], data=[], wb_name = 'wb-name', sheet_name = 'sheet-nam
     # 创建Excel工作簿
     wb = Workbook()
 
+    for i in wb:
+        print(i)
     # 激活当前sheet页
     sheet = wb.active
 
@@ -28,6 +31,27 @@ def createExcel(header=[], data=[], wb_name = 'wb-name', sheet_name = 'sheet-nam
     # 填充具体的数据
     for item in data:
         sheet.append(item)
+
+    font = Font(name='Calibri',
+            size=11,
+            color='1874CD',
+            bold=True,
+            italic=True,
+            vertAlign=None,
+            underline='none',
+            strike=False)
+    col = sheet.column_dimensions['A']
+    col.font = Font(color="1874CD")
+    row = sheet.row_dimensions[1]
+    row.font = font
+    # 设置行高
+    sheet['A1']='行高被设置为 100'
+    sheet.row_dimensions[1].height=100
+    sheet.column_dimensions['A'].width=100
+    
+
+    sheet['A1'].font = font
+
 
     filePath = os.path.join(os.path.dirname(__file__), wb_name + ".xlsx")
     wb.save(filePath)
