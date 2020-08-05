@@ -23,66 +23,64 @@ openpyxl_demos.py
 
 # Workbook.sheetnames, for sheet in Workbook,  #获取多个工作表单
 
-#Workbook.remove(Worksheet);
+# Workbook.remove(Worksheet);
 
 
 单元格cell的相关操作 ：
-#Worksheet.cell(), Wroksheet['Cell'],
-#Worksheet.cell(row,column,value), Cell.value, Worksheet.append([]),  #写入内容的方式：列号、值、列表。
+# Worksheet.cell(), Wroksheet['Cell'],
+# Worksheet.cell(row,column,value), Cell.value, Worksheet.append([]),  #写入内容的方式：列号、值、列表。
 
-#Cell.number_format,
-#openpyxl.comments.Comment(), Comment.height/width, Cell.comment,
+# Cell.number_format,
+# openpyxl.comments.Comment(), Comment.height/width, Cell.comment,
 
-#Cell.iter_rows/iter_cols,
-#Worksheet[:], Worksheet.rows / columns / values,
-#Worksheet.max_column / max_row,
+# Cell.iter_rows/iter_cols,
+# Worksheet[:], Worksheet.rows / columns / values,
+# Worksheet.max_column / max_row,
 
-#Worksheet.merge_cells() / unmerge_cell(),
-#Worksheet.column_dimensions.group(),
-#Worksheet.row_dimensions.group(),
+# Worksheet.merge_cells() / unmerge_cell(),
+# Worksheet.column_dimensions.group(),
+# Worksheet.row_dimensions.group(),
 
-#Worksheet.insert_cols(),
-#Worksheet.insert_rows(),
-#Worksheet.delete_cols(),
-#Worksheet.delete_rows(),
-#Worksheet.move_range(),
+# Worksheet.insert_cols(),
+# Worksheet.insert_rows(),
+# Worksheet.delete_cols(),
+# Worksheet.delete_rows(),
+# Worksheet.move_range(),
 
-#openpyxl.drawing.image.Image(), Worksheet.add_image(),
+# openpyxl.drawing.image.Image(), Worksheet.add_image(),
 
-#openpyxl.worksheet.table.Table()/TableStyleInfo(), 
-#Table.tableStyleInfo, 
-#Worksheet.add_table(), 
+# openpyxl.worksheet.table.Table()/TableStyleInfo(), 
+# Table.tableStyleInfo, 
+# Worksheet.add_table(), 
 
-#Worksheet.auto_filter.ref()/add_filter_column()/add_sort_condition();
-
-
+# Worksheet.auto_filter.ref()/add_filter_column()/add_sort_condition();
 
 使用样式styles（单元格样式 和 命名样式NameeStyle/样式模板）: 
 
-#单元格样式：默认格式设置 以及 单元格样式应用:
-#openpyxl.style.Font(),         Cell.font,
-#openpyxl.style.PatternFill(),  Cell.fill,
-#openpyxl.style.Border(),       Cell.border,
-#openpyxl.style.Side(),
-#openpyxl.style.Alignment(),    Cell.alignment,
-#openpyxl.style.Protection();
+# 单元格样式：默认格式设置 以及 单元格样式应用:
+# openpyxl.style.Font(),         Cell.font,
+# openpyxl.style.PatternFill(),  Cell.fill,
+# openpyxl.style.Border(),       Cell.border,
+# openpyxl.style.Side(),
+# openpyxl.style.Alignment(),    Cell.alignment,
+# openpyxl.style.Protection();
 
     
-#命名样式NameeStyle/样式模板: 
-#openpyxl.styles.NamedStyle(), Workbook.add_named_style(), Cell.style;
-#注意：
+# 命名样式NameeStyle/样式模板: 
+# openpyxl.styles.NamedStyle(), Workbook.add_named_style(), Cell.style;
+# 注意：
 #    命名样式在首次分配给单元时也将自动注册 如ws['A1'].style = NamedStyle(name='namedstyle')
 #    注册后，仅使用名称分配样式 如ws['A2'].style=namedstyle
 
     
 
 工作表单的页面设置：
-#Worksheet.page_setup.orientation / paperSize / fitToHeight / fitToWidth
+# Worksheet.page_setup.orientation / paperSize / fitToHeight / fitToWidth
 
-#Worksheet.print_options.horizontalCentered / verticalCentered
-#Worksheet.oddHeader.left.text / size / font / color
-#Worksheet.print_title_cols / rows
-#Worksheet.print_area
+# Worksheet.print_options.horizontalCentered / verticalCentered
+# Worksheet.oddHeader.left.text / size / font / color
+# Worksheet.print_title_cols / rows
+# Worksheet.print_area
 
 
 工作簿数据存储 ：Workbook.save()。
